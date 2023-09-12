@@ -339,8 +339,17 @@ export default async function Page({ params }: PageProps) {
 
       <div className="py-8 bg-zinc-50 border-t border-border">
         <div className="container mx-auto max-w-screen-xl">
-          {/* @ts-ignore */}
-          <PostFeed />
+          <section>
+            <header className="mb-4">
+              <h2 className="text-lg font-bold">
+                Mais acompanhantes em São Paulo
+              </h2>
+            </header>
+            <main className="space-y-8">
+              {/* @ts-ignore */}
+              <PostFeed genre={post.genre} />
+            </main>
+          </section>
         </div>
       </div>
     </>

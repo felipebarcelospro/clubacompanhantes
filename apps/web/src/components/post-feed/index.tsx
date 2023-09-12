@@ -53,8 +53,6 @@ const getPosts = async ({
     query: QueryString.parse(query),
   })
 
-  console.log(posts)
-
   return posts.data
 }
 
