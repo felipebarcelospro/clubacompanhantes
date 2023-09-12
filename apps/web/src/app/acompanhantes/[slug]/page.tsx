@@ -33,6 +33,10 @@ type PageProps = {
   }
 }
 
+export const revalidate = 3600
+export const dynamic = 'force-static'
+export const dynamicParams = true
+
 const getPostFromSlug = async (slug: string): Promise<Post> => {
   const posts = await fetchStrapi({
     path: `/posts`,

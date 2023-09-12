@@ -4,6 +4,7 @@ import { PostFeed } from '@/components/post-feed'
 import { cn } from '@/lib/cn'
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 export const metadata = {
   title: 'ClubAcompanhantes - Acompanhantes em São Paulo, SP',

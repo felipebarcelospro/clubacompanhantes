@@ -53,6 +53,8 @@ const getPosts = async ({
     query: QueryString.parse(query),
   })
 
+  console.log(posts)
+
   return posts.data
 }
 
@@ -73,11 +75,11 @@ export async function PostFeed({
 
   return (
     <section className="grid lg:grid-cols-4 gap-8">
-      {posts.map((post) => (
+      {posts?.map((post) => (
         <PostFeedCard data={post} key={post.name} />
       ))}
 
-      {posts.length === 0 && (
+      {!posts || posts.length === 0 && (
         <div className="col-span-full">
           <p>Nenhum resultado encontrado.</p>
         </div>

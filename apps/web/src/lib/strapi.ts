@@ -12,7 +12,9 @@ export function fetchStrapi({
 
   const parsedQuery = QueryString.stringify(query)
 
-  return fetch(`${strapiAPIURL}${path}?${parsedQuery}`, {
+  console.log(`${strapiAPIURL}/api${path}?${parsedQuery}`)
+
+  return fetch(`${strapiAPIURL}/api${path}?${parsedQuery}`, {
     next: { revalidate: 60 },
     headers: {
       'Content-Type': 'application/json',
