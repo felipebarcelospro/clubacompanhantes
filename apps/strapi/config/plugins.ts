@@ -20,6 +20,11 @@ export default ({ env }) => ({
          */
         cloudflarePublicAccessUrl: env("CF_PUBLIC_ACCESS_URL"),
       },
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
+      },
     },
   },
 });

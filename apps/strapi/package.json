@@ -12,9 +12,9 @@
   "devDependencies": {},
   "dependencies": {
     "@babel/highlight": "^7.22.13",
-    "@strapi/plugin-i18n": "4.13.4",
-    "@strapi/plugin-users-permissions": "4.13.4",
-    "@strapi/strapi": "4.13.4",
+    "@strapi/plugin-i18n": "4.13.5",
+    "@strapi/plugin-users-permissions": "4.13.5",
+    "@strapi/strapi": "4.13.5",
     "pg": "8.8.0",
     "strapi-plugin-untransform-response": "^0.1.6",
     "strapi-provider-cloudflare-r2": "^0.2.3"
