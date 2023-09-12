@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_posts_extras",
+  "info": {
+    "displayName": "extra",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "languages": {
+      "type": "string",
+      "required": true,
+      "default": "Português"
+    },
+    "height": {
+      "type": "decimal",
+      "required": true
+    },
+    "weight": {
+      "type": "decimal",
+      "required": true
+    },
+    "age": {
+      "type": "integer",
+      "required": true
+    },
+    "hair": {
+      "type": "string",
+      "required": true
+    },
+    "smoke": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

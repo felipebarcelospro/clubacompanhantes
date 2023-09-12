@@ -1,0 +1,13 @@
+{
+  "name": "eslint-config-custom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-next": "^13.4.1",
+    "eslint-config-turbo": "^1.9.3",
+    "@rocketseat/eslint-config": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
