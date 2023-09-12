@@ -10,7 +10,7 @@ export function RootLayoutFooter() {
         </span>
         <div className="space-x-4 flex-1 ml-8">
           <Link
-            href="https://blog.clubacompanhantes.com.br"
+            href="https://blog.clubacompanhantes.com"
             className="text-sm opacity-60"
             target="_blank"
           >
