@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import { PostFeed } from '@/components/post-feed'
 import { cn } from '@/lib/cn'
-import { PropsWithChildren } from 'react'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,13 +13,13 @@ export const metadata = {
 
 export default function Page({
   searchParams,
-}: PropsWithChildren<{
+}: {
   searchParams?: {
     location?: string
     term?: string
     genre?: string
   }
-}>) {
+}) {
   let texts = {
     title: 'As melhores acompanhantes de São Paulo, SP',
     description:
