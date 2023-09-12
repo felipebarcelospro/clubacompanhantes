@@ -1,4 +1,4 @@
-export default [
+export default ({ env }) => [
   'strapi::errors',
   'strapi::security',
   'strapi::cors',
@@ -9,4 +9,28 @@ export default [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "https:"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            env("CF_PUBLIC_ACCESS_URL").replace(/^https?:\/\//, ""),
+          ],
+          "media-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            env("CF_PUBLIC_ACCESS_URL").replace(/^https?:\/\//, ""),
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
 ]

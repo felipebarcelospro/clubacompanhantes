@@ -75,15 +75,14 @@ export async function PostFeed({
 
   return (
     <section className="grid lg:grid-cols-4 gap-8">
-      {posts?.map((post) => (
-        <PostFeedCard data={post} key={post.name} />
-      ))}
+      {posts?.map((post) => <PostFeedCard data={post} key={post.name} />)}
 
-      {!posts || posts.length === 0 && (
-        <div className="col-span-full">
-          <p>Nenhum resultado encontrado.</p>
-        </div>
-      )}
+      {!posts ||
+        (posts.length === 0 && (
+          <div className="col-span-full">
+            <p>Nenhum resultado encontrado.</p>
+          </div>
+        ))}
     </section>
   )
 }
