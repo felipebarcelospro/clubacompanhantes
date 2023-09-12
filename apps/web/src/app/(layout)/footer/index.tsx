@@ -27,16 +27,11 @@ export function RootLayoutFooter() {
 
         <Link
           href={process.env.NEXT_PUBLIC_WHATSAPP_URL || '#'}
+          className="text-sm opacity-60 flex items-center"
           target="_blank"
         >
-          <Link
-            href="#"
-            className="text-sm opacity-60 flex items-center"
-            target="_blank"
-          >
-            Anuncie conosco
-            <ArrowRightIcon className="w-3 h-3 ml-2" />
-          </Link>
+          Anuncie conosco
+          <ArrowRightIcon className="w-3 h-3 ml-2" />
         </Link>
       </div>
     </footer>

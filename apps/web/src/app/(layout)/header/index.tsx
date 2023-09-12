@@ -21,15 +21,15 @@ export function RootLayoutHeader() {
         </div>
 
         <div className="lg:flex items-center justify-end space-x-4 hidden">
-          <Link
-            href={process.env.NEXT_PUBLIC_WHATSAPP_URL || '#'}
-            target="_blank"
-          >
-            <Button className="rounded-full" variant="ghost">
+          <Button className="rounded-full" variant="ghost" asChild>
+            <Link
+              href={process.env.NEXT_PUBLIC_WHATSAPP_URL || '#'}
+              target="_blank"
+            >
               <ArrowRight className="w-3 h-3 mr-2" />
               Anuncie no ClubAcompanhantes
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </header>
