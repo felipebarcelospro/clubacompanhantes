@@ -93,7 +93,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <div className="container mx-auto max-w-screen-xl space-y-8 py-8">
+      <div className="container mx-auto max-w-screen-xl space-y-8 py-8 pb-12">
         <Breadcrumb
           paths={[
             {
@@ -337,7 +337,7 @@ export default async function Page({ params }: PageProps) {
         </div>
       </div>
 
-      <div className="py-8 bg-zinc-50 border-t border-border">
+      <div className="py-8 pt-12 bg-zinc-50 border-t border-border">
         <div className="container mx-auto max-w-screen-xl">
           <section>
             <header className="mb-4">
