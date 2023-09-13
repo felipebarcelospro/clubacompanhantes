@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
     "eslint-config-next": "^13.4.1",
     "eslint-config-turbo": "^1.9.3",
-    "@rocketseat/eslint-config": "^2.1.0"
+    "typescript": "^5.2.2"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+   
   }
 }
