@@ -72,7 +72,7 @@ export async function PostFeed({
   })
 
   return (
-    <section className="grid lg:grid-cols-4 gap-8">
+    <section className="grid lg:grid-cols-4 gap-6">
       {posts?.map((post, index) => <PostFeedCard data={post} index={index} key={post.name} />)}
 
       {!posts ||
