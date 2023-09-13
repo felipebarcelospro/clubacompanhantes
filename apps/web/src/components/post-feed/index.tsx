@@ -4,6 +4,7 @@ import QueryString from 'qs'
 import { getAssetUrl } from '@/lib/get-asset-url'
 import { fetchStrapi } from '@/lib/strapi'
 import { Post } from '@/types/post'
+import Image from 'next/image'
 
 const getPosts = async ({
   term,
@@ -90,10 +91,12 @@ export function PostFeedCard({ data }: { data: Post }) {
     <article>
       <header className="mb-4">
         <Link href={`/acompanhantes/${data.slug}`}>
-          <img
+          <Image
             alt={data.name}
             className="h-80 w-full rounded-xl object-cover hover:opacity-80 transition-opacity duration-300 ease-in-out"
             src={getAssetUrl(data.gallery[0].url)}
+            width={512}
+            height={512}
           />
         </Link>
       </header>

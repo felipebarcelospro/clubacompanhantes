@@ -1,12 +1,14 @@
+import Image from "next/image";
+
 export function Logo() {
   return (
     <>
-      <img className="h-16 hidden lg:block" src="/logo.svg" alt="" srcSet="" />
-      <img
+      <Image className="h-16 hidden lg:block" src="/logo.svg" alt="" unoptimized />
+      <Image
         className="h-10 lg:hidden"
         src="/logo-only-icon.png"
         alt=""
-        srcSet=""
+        unoptimized
       />
     </>
   )

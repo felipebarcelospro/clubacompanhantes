@@ -1,6 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/cn'
+import NextImage from 'next/image'
 import React, { useEffect, useState } from 'react'
 
 interface Props {
@@ -93,7 +94,7 @@ export const PostGallery: React.FC<Props> = ({ images, numCols }) => {
       {columns.map((col, colIndex) => (
         <div key={colIndex} className="grid gap-2">
           {col.images.map((image, index) => (
-            <img
+            <NextImage
               key={index}
               className={cn([
                 `h-full min-h-[220px] max-w-full rounded-lg object-cover`,
