@@ -43,7 +43,7 @@ export function SearchInput() {
         className="h-12 lg:w-[20rem] outline-none"
         defaultValue={searchParams.get('term') || ''}
       />
-      <Button size="icon" className="!rounded-full" type="submit">
+      <Button size="icon" className="!rounded-full" type="submit" title='Pesquisar' aria-label='Pesquisar'>
         <SearchIcon className="h-4 w-4" />
       </Button>
     </form>

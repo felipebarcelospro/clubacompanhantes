@@ -12,6 +12,8 @@ export function RootLayoutHeader() {
         <Link
           href="/"
           className="flex-items-center justify-start hover:opacity-80 transition-opacity duration-300 ease-in-out"
+          title='Club Acompanhantes - As melhores acompanhantes de São Paulo'
+          aria-label='Club Acompanhantes - As melhores acompanhantes de São Paulo'
         >
           <Logo />
         </Link>
@@ -21,7 +23,7 @@ export function RootLayoutHeader() {
         </div>
 
         <div className="lg:flex items-center justify-end space-x-4 hidden">
-          <Button className="rounded-full" variant="ghost" asChild>
+          <Button className="rounded-full" variant="ghost"  asChild>
             <Link
               href={process.env.NEXT_PUBLIC_WHATSAPP_URL || '#'}
               target="_blank"
