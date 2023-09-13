@@ -4,7 +4,6 @@ import QueryString from 'qs'
 import { getAssetUrl } from '@/lib/get-asset-url'
 import { fetchStrapi } from '@/lib/strapi'
 import { Post } from '@/types/post'
-import Image from 'next/image'
 
 const getPosts = async ({
   term,
@@ -74,7 +73,7 @@ export async function PostFeed({
 
   return (
     <section className="grid lg:grid-cols-4 gap-8">
-      {posts?.map((post) => <PostFeedCard data={post} key={post.name} />)}
+      {posts?.map((post, index) => <PostFeedCard data={post} index={index} key={post.name} />)}
 
       {!posts ||
         (posts.length === 0 && (
@@ -86,17 +85,18 @@ export async function PostFeed({
   )
 }
 
-export function PostFeedCard({ data }: { data: Post }) {
+export function PostFeedCard({ data, index }: { data: Post, index: number }) {
   return (
     <article>
       <header className="mb-4">
         <Link href={`/acompanhantes/${data.slug}`}>
-          <Image
+          <img
             alt={data.name}
             className="h-80 w-full rounded-xl object-cover hover:opacity-80 transition-opacity duration-300 ease-in-out"
             src={getAssetUrl(data.gallery[0].url)}
             width={512}
             height={512}
+            loading={index < 4 ? 'eager' : 'lazy'}
           />
         </Link>
       </header>
